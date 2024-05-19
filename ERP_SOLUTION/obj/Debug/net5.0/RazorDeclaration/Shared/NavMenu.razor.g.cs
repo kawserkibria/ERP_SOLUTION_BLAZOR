@@ -13,70 +13,70 @@ namespace ERP_SOLUTION.Shared
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
 #nullable restore
-#line 1 "C:\Users\Administrator\Desktop\Kawsar\blazor\ERP_SOLUTION\ERP_SOLUTION\_Imports.razor"
+#line 1 "F:\aktar\ERP_SOLUTION_BLAZOR\ERP_SOLUTION\_Imports.razor"
 using System.Net.Http;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Administrator\Desktop\Kawsar\blazor\ERP_SOLUTION\ERP_SOLUTION\_Imports.razor"
+#line 2 "F:\aktar\ERP_SOLUTION_BLAZOR\ERP_SOLUTION\_Imports.razor"
 using Microsoft.AspNetCore.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\Administrator\Desktop\Kawsar\blazor\ERP_SOLUTION\ERP_SOLUTION\_Imports.razor"
+#line 3 "F:\aktar\ERP_SOLUTION_BLAZOR\ERP_SOLUTION\_Imports.razor"
 using Microsoft.AspNetCore.Components.Authorization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 4 "C:\Users\Administrator\Desktop\Kawsar\blazor\ERP_SOLUTION\ERP_SOLUTION\_Imports.razor"
+#line 4 "F:\aktar\ERP_SOLUTION_BLAZOR\ERP_SOLUTION\_Imports.razor"
 using Microsoft.AspNetCore.Components.Forms;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 5 "C:\Users\Administrator\Desktop\Kawsar\blazor\ERP_SOLUTION\ERP_SOLUTION\_Imports.razor"
+#line 5 "F:\aktar\ERP_SOLUTION_BLAZOR\ERP_SOLUTION\_Imports.razor"
 using Microsoft.AspNetCore.Components.Routing;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 6 "C:\Users\Administrator\Desktop\Kawsar\blazor\ERP_SOLUTION\ERP_SOLUTION\_Imports.razor"
+#line 6 "F:\aktar\ERP_SOLUTION_BLAZOR\ERP_SOLUTION\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 7 "C:\Users\Administrator\Desktop\Kawsar\blazor\ERP_SOLUTION\ERP_SOLUTION\_Imports.razor"
+#line 7 "F:\aktar\ERP_SOLUTION_BLAZOR\ERP_SOLUTION\_Imports.razor"
 using Microsoft.AspNetCore.Components.Web.Virtualization;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 8 "C:\Users\Administrator\Desktop\Kawsar\blazor\ERP_SOLUTION\ERP_SOLUTION\_Imports.razor"
+#line 8 "F:\aktar\ERP_SOLUTION_BLAZOR\ERP_SOLUTION\_Imports.razor"
 using Microsoft.JSInterop;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 9 "C:\Users\Administrator\Desktop\Kawsar\blazor\ERP_SOLUTION\ERP_SOLUTION\_Imports.razor"
+#line 9 "F:\aktar\ERP_SOLUTION_BLAZOR\ERP_SOLUTION\_Imports.razor"
 using ERP_SOLUTION;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 10 "C:\Users\Administrator\Desktop\Kawsar\blazor\ERP_SOLUTION\ERP_SOLUTION\_Imports.razor"
+#line 10 "F:\aktar\ERP_SOLUTION_BLAZOR\ERP_SOLUTION\_Imports.razor"
 using ERP_SOLUTION.Shared;
 
 #line default
@@ -90,7 +90,7 @@ using ERP_SOLUTION.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\Administrator\Desktop\Kawsar\blazor\ERP_SOLUTION\ERP_SOLUTION\Shared\NavMenu.razor"
+#line 28 "F:\aktar\ERP_SOLUTION_BLAZOR\ERP_SOLUTION\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
