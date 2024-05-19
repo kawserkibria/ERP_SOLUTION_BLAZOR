@@ -14,14 +14,14 @@
                 @Body
             </div>
         </div>
-    </div>*@ 
-@*<h1></h1>*@
+    </div>*@
+
 
 @inherits LayoutComponentBase
 @*@inject Microsoft.JSInterop.IJSRuntime JsRuntime;*@
 @inject NavigationManager UriHelper
 @*@inject HttpClient Http*@
-
+<h1>lll</h1>
 
 <div id="sidebar-mobile" class="position-fixed">
     <div class="sidebar-wrapper">
@@ -461,7 +461,7 @@
 
                         </li>
                         <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end" data-toggle="collapse"
-                            href="#accounce-subListcollapse-2" role="button" aria-expanded="false"
+                            href="#accounce-subListcollapse-1" role="button" aria-expanded="false"
                             aria-controls="subListcollapse-2">
                             <div class="sub-list-collapse-icon align-self-center">
                                 <i class="fa-solid fa-caret-right"></i>
@@ -472,10 +472,10 @@
                             </span>
                             <p class="m-0">Inventory</p>
                         </li>
-                        <div class="collapse subListcollapse" id="accounce-subListcollapse-2">
+                        <div class="collapse subListcollapse" id="accounce-subListcollapse-1">
                             <ul class="list-group">
                                 <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
-                                    data-toggle="collapse" href="#subListcollapse-2-1" role="button"
+                                    data-toggle="collapse" href="#subListcollapse-1-1" role="button"
                                     aria-expanded="false" aria-controls="subListcollapse-2-1">
                                     <div class="sub-list-collapse-icon align-self-center">
                                         <i class="fa-solid fa-caret-right"></i>
@@ -483,29 +483,40 @@
                                     <p class="m-0">Master</p>
 
                                 </li>
-                                <div class="collapse subListcollapse" id="subListcollapse-2-1">
+                                <div class="collapse subListcollapse" id="subListcollapse-1-1">
                                     <ul class="list-group">
                                         <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
-                                            <a href="Supplier">Supplier</a>
+                                            <a href="Supplier">Product Group</a>
                                         </li>
                                         <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
-                                            B
+                                            <a href="Supplier">Pack Size</a>
                                         </li>
                                         <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
-                                            C
+                                            <a href="Supplier">Power/Class</a>
                                         </li>
                                         <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
-                                            D
+                                            <a href="Supplier">Measuring Unit</a>
                                         </li>
                                         <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
-                                            E
+                                            <a href="Supplier">Product Entry</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Location</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Voucher Type</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Process Information</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Batch No.</a>
                                         </li>
                                     </ul>
                                 </div>
-                                
                                 <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
                                     data-toggle="collapse" href="#transection_subListcollapse" role="button"
-                                    aria-expanded="false" aria-controls="subListcollapse-2-1">
+                                    aria-expanded="false" aria-controls="subListcollapse-1-2">
                                     <div class="sub-list-collapse-icon align-self-center">
                                         <i class="fa-solid fa-caret-right"></i>
                                     </div>
@@ -530,7 +541,7 @@
                                 </div>
                                 <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
                                     data-toggle="collapse" href="#report_subListcollapse" role="button"
-                                    aria-expanded="false" aria-controls="subListcollapse-2-1">
+                                    aria-expanded="false" aria-controls="subListcollapse-1-3">
                                     <div class="sub-list-collapse-icon align-self-center">
                                         <i class="fa-solid fa-caret-right"></i>
                                     </div>
@@ -559,13 +570,356 @@
                                             <a href="General_Journal">General Journal</a>
                                         </li>
                                     </ul>
-                                </div>                                
+                                </div>
+                            </ul>
+                        </div>
+
+                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end" data-toggle="collapse"
+                            href="#accounce-subListcollapse-2" role="button" aria-expanded="false"
+                            aria-controls="subListcollapse-2">
+                            <div class="sub-list-collapse-icon align-self-center">
+                                <i class="fa-solid fa-caret-right"></i>
+                            </div>
+
+                            <span class="material-symbols-outlined mr-3">
+                                person
+                            </span>
+                            <p class="m-0">Purchase</p>
+                        </li>
+                        <div class="collapse subListcollapse" id="accounce-subListcollapse-2">
+                            <ul class="list-group">
+                                <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
+                                    data-toggle="collapse" href="#subListcollapse-2-1" role="button"
+                                    aria-expanded="false" aria-controls="subListcollapse-2-2">
+                                    <div class="sub-list-collapse-icon align-self-center">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                    </div>
+                                    <p class="m-0">Master</p>
+
+                                </li>
+                                <div class="collapse subListcollapse" id="subListcollapse-2-1">
+                                    <ul class="list-group">
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Supplier Information</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Voucher Type</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
+                                    data-toggle="collapse" href="#transection_subListcollapse-2-2" role="button"
+                                    aria-expanded="false" aria-controls="subListcollapse-2-2">
+                                    <div class="sub-list-collapse-icon align-self-center">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                    </div>
+                                    <p class="m-0">Transection</p>
+
+                                </li>
+                                <div class="collapse subListcollapse" id="transection_subListcollapse-2-2">
+                                    <ul class="list-group">
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Payment
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Receipt
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Journal
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Contra
+                                        </li>
+                                    </ul>
+                                </div>
+                                <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
+                                    data-toggle="collapse" href="#report_subListcollapse-2-3" role="button"
+                                    aria-expanded="false" aria-controls="subListcollapse-2-3">
+                                    <div class="sub-list-collapse-icon align-self-center">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                    </div>
+                                    <p class="m-0">Reports</p>
+
+                                </li>
+                                <div class="collapse subListcollapse" id="report_subListcollapse-2-3">
+                                    <ul class="list-group">
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg">Trial Balance</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg">Balance Sheet</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg">Profit & Loss</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg_gl">General Ledger</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="General_Journal">General Journal</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                        @*-----------Sales------*@
+                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end" data-toggle="collapse"
+                            href="#accounce-subListcollapse-3" role="button" aria-expanded="false"
+                            aria-controls="subListcollapse-3">
+                            <div class="sub-list-collapse-icon align-self-center">
+                                <i class="fa-solid fa-caret-right"></i>
+                            </div>
+
+                            <span class="material-symbols-outlined mr-3">
+                                person
+                            </span>
+                            <p class="m-0">Sales</p>
+                        </li>
+                        <div class="collapse subListcollapse" id="accounce-subListcollapse-3">
+                            <ul class="list-group">
+                                <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
+                                    data-toggle="collapse" href="#subListcollapse-3-1" role="button"
+                                    aria-expanded="false" aria-controls="subListcollapse-3-3">
+                                    <div class="sub-list-collapse-icon align-self-center">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                    </div>
+                                    <p class="m-0">Master</p>
+
+                                </li>
+                                <div class="collapse subListcollapse" id="subListcollapse-3-1">
+                                    <ul class="list-group">
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Product Commission</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Territory</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Designation</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Employee Type </a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Sales Representative</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Sales Party</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Sales Price Label</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Sales Price</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Gift Items</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Bonus</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Transport Name</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Destination</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Voucher Type</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Sales Target (Amount / Product)</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Collection Target</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">MPO. Commission</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Projection</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Credit Limit</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                                <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
+                                    data-toggle="collapse" href="#transection_subListcollapse-3-2" role="button"
+                                    aria-expanded="false" aria-controls="subListcollapse-3-2">
+                                    <div class="sub-list-collapse-icon align-self-center">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                    </div>
+                                    <p class="m-0">Transection</p>
+
+                                </li>
+                                <div class="collapse subListcollapse" id="transection_subListcollapse-3-2">
+                                    <ul class="list-group">
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Payment
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Receipt
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Journal
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Contra
+                                        </li>
+                                    </ul>
+                                </div>
+                                <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
+                                    data-toggle="collapse" href="#report_subListcollapse-3-3" role="button"
+                                    aria-expanded="false" aria-controls="subListcollapse-3-3">
+                                    <div class="sub-list-collapse-icon align-self-center">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                    </div>
+                                    <p class="m-0">Reports</p>
+
+                                </li>
+                                <div class="collapse subListcollapse" id="report_subListcollapse-3-3">
+                                    <ul class="list-group">
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg">Trial Balance</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg">Balance Sheet</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg">Profit & Loss</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg_gl">General Ledger</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="General_Journal">General Journal</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </ul>
+                        </div>
+                        @*------------Acounts-----------*@
+                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end" data-toggle="collapse"
+                            href="#accounce-subListcollapse-4" role="button" aria-expanded="false"
+                            aria-controls="subListcollapse-4">
+                            <div class="sub-list-collapse-icon align-self-center">
+                                <i class="fa-solid fa-caret-right"></i>
+                            </div>
+
+                            <span class="material-symbols-outlined mr-3">
+                                person
+                            </span>
+                            <p class="m-0">Accounts</p>
+                        </li>
+                        <div class="collapse subListcollapse" id="accounce-subListcollapse-4">
+                            <ul class="list-group">
+                                <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
+                                    data-toggle="collapse" href="#subListcollapse-4-1" role="button"
+                                    aria-expanded="false" aria-controls="subListcollapse-4-4">
+                                    <div class="sub-list-collapse-icon align-self-center">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                    </div>
+                                    <p class="m-0">Master</p>
+
+                                </li>
+                                <div class="collapse subListcollapse" id="subListcollapse-4-1">
+                                    <ul class="list-group">
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Branch Name</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Accounts Group</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Accounts Ledger</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Voucher Type </a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Non Current Assets</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Financial Statement/Budget</a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
+                                    data-toggle="collapse" href="#transection_subListcollapse-4-2" role="button"
+                                    aria-expanded="false" aria-controls="subListcollapse-3-2">
+                                    <div class="sub-list-collapse-icon align-self-center">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                    </div>
+                                    <p class="m-0">Transection</p>
+
+                                </li>
+                                <div class="collapse subListcollapse" id="transection_subListcollapse-4-2">
+                                    <ul class="list-group">
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Payment
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Receipt
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Journal
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Contra
+                                        </li>
+                                    </ul>
+                                </div>
+                                <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
+                                    data-toggle="collapse" href="#report_subListcollapse-4-3" role="button"
+                                    aria-expanded="false" aria-controls="subListcollapse-4-3">
+                                    <div class="sub-list-collapse-icon align-self-center">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                    </div>
+                                    <p class="m-0">Reports</p>
+
+                                </li>
+                                <div class="collapse subListcollapse" id="report_subListcollapse-4-3">
+                                    <ul class="list-group">
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg">Trial Balance</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg">Balance Sheet</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg">Profit & Loss</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg_gl">General Ledger</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="General_Journal">General Journal</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </ul>
                         </div>
 
                         <!--Contact  end-->
                         <!-- start save collapse links in this list -->
-                        <div class="collapse" id="collapseExample">                            
+                        <div class="collapse" id="collapseExample">
                         </div>
                         <!-- end save collapse links in this list -->
                     </ul>                    
