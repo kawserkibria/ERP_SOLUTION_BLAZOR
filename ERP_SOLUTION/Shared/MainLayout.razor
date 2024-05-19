@@ -1,0 +1,664 @@
+﻿@*@inherits LayoutComponentBase
+
+    <div class="page">
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+
+        <div class="main">
+            <div class="top-row px-4">
+                <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            </div>
+
+            <div class="content px-4">
+                @Body
+            </div>
+        </div>
+    </div>*@
+
+
+@inherits LayoutComponentBase
+@*@inject Microsoft.JSInterop.IJSRuntime JsRuntime;*@
+@inject NavigationManager UriHelper
+@*@inject HttpClient Http*@
+
+
+<div id="sidebar-mobile" class="position-fixed">
+    <div class="sidebar-wrapper">
+        <ul class="list-group mt-4">
+            <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end">
+                <div class="sub-list-collapse-icon align-self-center">
+                </div>
+                <span class="material-symbols-outlined mr-3">
+                    home
+                </span>
+                Home
+            </li>
+            <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end" data-toggle="collapse"
+                href="#subListcollapse-2" role="button" aria-expanded="false" aria-controls="subListcollapse-2">
+                <div class="sub-list-collapse-icon align-self-center">
+                    <i class="fa-solid fa-caret-right"></i>
+                </div>
+
+                <span class="material-symbols-outlined mr-3">
+                    person
+                </span>
+                <p class="m-0">Admin</p>
+            </li>
+            <div class="collapse subListcollapse" id="subListcollapse-2">
+                <ul class="list-group">
+                    <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center" data-toggle="collapse"
+                        href="#subListcollapse-2-1" role="button" aria-expanded="false"
+                        aria-controls="subListcollapse-2-1">
+                        <div class="sub-list-collapse-icon align-self-center">
+                            <i class="fa-solid fa-caret-right"></i>
+                        </div>
+                        <p class="m-0">Directory-01</p>
+
+                    </li>
+                    <div class="collapse subListcollapse" id="subListcollapse-2-1">
+                        <ul class="list-group">
+                            <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                Directory-01-01
+                            </li>
+                            <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                Directory-01-02
+                            </li>
+                            <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                Directory-01-03
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                        Directory-02
+                    </li>
+                    <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                        Directory-02
+                    </li>
+                </ul>
+            </div>
+            <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end">
+                <div class="sub-list-collapse-icon align-self-center">
+                    <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <span class="material-symbols-outlined mr-3">
+                    devices
+                </span>
+                <p class="m-0">Devices</p>
+            </li>
+            <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end">
+                <div class="sub-list-collapse-icon align-self-center">
+                    <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <span class="material-symbols-outlined mr-3">
+                    apps
+                </span>
+                <p class="m-0">Apps</p>
+            </li>
+            <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end">
+                <div class="sub-list-collapse-icon align-self-center">
+                    <i class="fa-solid fa-caret-right"></i>
+                </div>
+                <span class="material-symbols-outlined mr-3">
+                    credit_card
+                </span>
+                <p class="m-0">Billing</p>
+            </li>
+
+
+            @*----------------*@
+            <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end" data-toggle="collapse"
+                href="#hr-subListcollapse-2" role="button" aria-expanded="false" aria-controls="subListcollapse-2">
+                <div class="sub-list-collapse-icon align-self-center">
+                    <i class="fa-solid fa-caret-right"></i>
+                </div>
+
+                <span class="material-symbols-outlined mr-3">
+                    person
+                </span>
+                <p class="m-0">HR</p>
+            </li>
+            <div class="collapse subListcollapse" id="hr-subListcollapse-2">
+                <ul class="list-group">
+                    <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center" data-toggle="collapse"
+                        href="#subListcollapse-2-1" role="button" aria-expanded="false"
+                        aria-controls="subListcollapse-2-1">
+                        <div class="sub-list-collapse-icon align-self-center">
+                            <i class="fa-solid fa-caret-right"></i>
+                        </div>
+                        <p class="m-0">Directory-01</p>
+
+                    </li>
+                    <div class="collapse subListcollapse" id="subListcollapse-2-1">
+                        <ul class="list-group">
+                            <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                Directory-01-01
+                            </li>
+                            <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                Directory-01-02
+                            </li>
+                            <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                Directory-01-03
+                            </li>
+                        </ul>
+                    </div>
+                    <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                        Directory-02
+                    </li>
+                    <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                        Directory-02
+                    </li>
+                </ul>
+            </div>
+
+            @*-----------------*@
+
+            <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end">
+                <div class="sub-list-collapse-icon align-self-center">
+                    <i class="fa-solid fa-caret-right"></i>
+                </div>
+
+                <span class="material-symbols-outlined mr-3">
+                    alternate_email
+                </span>
+                <p class="m-0">Account</p>
+            </li>
+            <!-- start save collapse links in this list -->
+            <div class="collapse" id="collapseExample">
+            <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end" data-toggle="collapse"
+                href="#subListcollapse-1" role="button" aria-expanded="false" aria-controls="subListcollapse-1">
+                <div class="sub-list-collapse-icon align-self-center">
+                    <i class="fa-solid fa-caret-right"></i>
+                </div>
+
+                <span class="material-symbols-outlined mr-3">
+                    person
+                </span>Home
+            </li>
+            <div class="collapse subListcollapse" id="subListcollapse-1">
+                <ul class="list-group">
+                    <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                        test1
+                    </li>
+                </ul>
+            </div>
+    </div>
+    <!-- end save collapse links in this list -->
+    </ul>
+</div>
+</div>
+<div class="main d-flex flex-column">
+    <nav class="d-flex w-100 position-fixed px-3">
+        <div class="nav-left d-flex align-items-center flex-grow-1">
+            @*<span class="material-symbols-outlined text-white ml-3 cursor-pointer menu-controller">
+                menu
+            </span>*@
+            <a class="navbar-brand text-white ml-3" href="WebsiteAdmin">
+                ERP Solution
+            </a>
+            
+        </div>
+        <div class="nav-right d-flex flex-grow-1 justify-content-end">
+            <div class="nav-group-icons d-flex align-items-center">
+                <ul class="list-group list-group-horizontal mr-3">
+                    <li class="list-group-item border-0">
+                        <div class="btn-group">
+                            <span class="material-symbols-outlined text-white"
+                                  data-toggle="dropdown" aria-expanded="false">
+                                notifications
+                            </span>
+                            <div class="dropdown-menu dropdown-menu-right px-2"
+                                 style="width: 350px;height: 350px;overflow: auto">
+                                <div class="noti-header d-flex justify-content-between">
+                                    <span>Alert</span>
+                                    <span>View All</span>
+                                </div>
+                                <div class="noti-wrapper d-flex mt-2">
+                                    <div class="noti-left d-flex align-items-start">
+                                        <img src="images/gmail.png" alt="" width="20" height="20"
+                                             class="mr-2 mt-1">
+                                    </div>
+                                    <div class="d-flex justify-content-between flex-grow-1">
+                                        <div class="noti-title-middle d-flex flex-grow-1">
+                                            <div class="noti-sub-details d-flex flex-column justify-content-between">
+                                                <span>Google Operations</span>
+                                                <small class="text-truncate" style="max-width: 235px;">
+                                                    this is some
+                                                    random text for test
+                                                    purpose.this is some random
+                                                    text for test purposethis is some random text for test
+                                                    purpose
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="noti-title-right d-flex flex-column justify-content-between"
+                                             style="min-width: 60px;">
+                                            <small>2022-06-30</small>
+                                            <span class="badge badge-primary mt-2">Primary</span>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="noti-wrapper d-flex mt-2">
+                                    <div class="noti-left d-flex align-items-start">
+                                        <img src="images/gmail.png" alt="" width="20" height="20"
+                                             class="mr-2 mt-1">
+                                    </div>
+                                    <div class="d-flex justify-content-between flex-grow-1">
+                                        <div class="noti-title-middle d-flex flex-grow-1">
+                                            <div class="noti-sub-details d-flex flex-column justify-content-between">
+                                                <span>Google Operations</span>
+                                                <small class="text-truncate" style="max-width: 235px;">
+                                                    this is some
+                                                    random text for test
+                                                    purpose.this is some random
+                                                    text for test purposethis is some random text for test
+                                                    purpose
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="noti-title-right d-flex flex-column justify-content-between"
+                                             style="min-width: 60px;">
+                                            <small>2022-06-30</small>
+                                            <span class="badge badge-primary mt-2">Primary</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item border-0">
+                        <div class="btn-group">
+                            <span class="material-symbols-outlined text-white "
+                                  data-toggle="dropdown" aria-expanded="false">
+                                hourglass_empty
+                            </span>
+                            <div class="dropdown-menu dropdown-menu-right px-2"
+                                 style="width: 350px;height: 350px;overflow: auto">
+                                <div class="noti-header d-flex justify-content-between">
+                                    <span>Alert</span>
+                                    <span>View All</span>
+                                </div>
+                                <div class="noti-wrapper d-flex mt-2">
+                                    <div class="noti-left d-flex align-items-start">
+                                        <img src="images/gmail.png" alt="" width="20" height="20"
+                                             class="mr-2 mt-1">
+                                    </div>
+                                    <div class="d-flex justify-content-between flex-grow-1">
+                                        <div class="noti-title-middle d-flex flex-grow-1">
+                                            <div class="noti-sub-details d-flex flex-column justify-content-between">
+                                                <span>Google Operations</span>
+                                                <small class="text-truncate" style="max-width: 235px;">
+                                                    this is some
+                                                    random text for test
+                                                    purpose.this is some random
+                                                    text for test purposethis is some random text for test
+                                                    purpose
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="noti-title-right d-flex flex-column justify-content-between"
+                                             style="min-width: 60px;">
+                                            <small>2022-06-30</small>
+                                            <span class="badge badge-primary mt-2">Primary</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="noti-wrapper d-flex mt-2">
+                                    <div class="noti-left d-flex align-items-start">
+                                        <img src="images/gmail.png" alt="" width="20" height="20"
+                                             class="mr-2 mt-1">
+                                    </div>
+                                    <div class="d-flex justify-content-between flex-grow-1">
+                                        <div class="noti-title-middle d-flex flex-grow-1">
+                                            <div class="noti-sub-details d-flex flex-column justify-content-between">
+                                                <span>Google Operations</span>
+                                                <small class="text-truncate" style="max-width: 235px;">
+                                                    this is some
+                                                    random text for test
+                                                    purpose.this is some random
+                                                    text for test purposethis is some random text for test
+                                                    purpose
+                                                </small>
+                                            </div>
+                                        </div>
+                                        <div class="noti-title-right d-flex flex-column justify-content-between"
+                                             style="min-width: 60px;">
+                                            <small>2022-06-30</small>
+                                            <span class="badge badge-primary mt-2">Primary</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item border-0">
+                        <div class="btn-group">
+                            <span class="material-symbols-outlined text-white "
+                                  data-toggle="dropdown" aria-expanded="false">
+                                help
+                            </span>
+                            <div class="dropdown-menu dropdown-menu-right px-2">
+                                <a href="Manual" target="_blank">Manual</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-user-icons d-flex align-items-center">
+                <ul class="list-group list-group-horizontal">
+
+                    <li class="list-group-item border-0 d-flex align-items-center mini-search-input">
+                        <div class="btn-group">
+                            <span class="material-symbols-outlined text-white "
+                                  data-toggle="dropdown" aria-expanded="false">
+                                search
+                            </span>
+                            <div class="dropdown-menu dropdown-menu-right p-2"
+                                 style="width: 275px;overflow-y: auto;">
+                                <input type="text" class="form-control" placeholder="Search..">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item border-0 d-flex align-items-center">
+                        <div class="btn-group">
+                            <span class="material-symbols-outlined text-white "
+                                  data-toggle="dropdown" aria-expanded="false">
+                                apps
+                            </span>
+                            <div class="dropdown-menu dropdown-menu-right p-2"
+                                 style="width: 275px;height: 350px;overflow-y: auto;">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-4 col-md-4 p-3 d-flex flex-column align-items-center justify-content-center apps-icons">
+                                            <div class="apps-wrapper d-flex flex-column justify-content-center align-items-center">
+                                                <img src="images/google.png" alt="" width="40" height="40">
+                                                <span style="font-size: 14px;">Search</span>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-4 col-md-4 p-3 d-flex flex-column align-items-center justify-content-center apps-icons">
+                                            <img src="images/gmail.png" alt="" width="40" height="40">
+                                            <span style="font-size: 14px;">Gmail</span>
+                                        </div>
+                                        <div class="col-4 col-md-4 p-3 d-flex flex-column align-items-center justify-content-center apps-icons">
+                                            <img src="images/photos.png" alt="" width="40" height="40">
+                                            <span style="font-size: 14px;">Photos</span>
+                                        </div>
+                                        <div class="col-4 col-md-4 p-3 d-flex flex-column align-items-center justify-content-center apps-icons">
+                                            <img src="images/google.png" alt="" width="40" height="40">
+                                            <span style="font-size: 14px;">Search</span>
+                                        </div>
+                                        <div class="col-4 col-md-4 p-3 d-flex flex-column align-items-center justify-content-center apps-icons">
+                                            <img src="images/gmail.png" alt="" width="40" height="40">
+                                            <span style="font-size: 14px;">Gmail</span>
+                                        </div>
+                                        <div class="col-4 col-md-4 p-3 d-flex flex-column align-items-center justify-content-center apps-icons">
+                                            <img src="./images/photos.png" alt="" width="40" height="40">
+                                            <span style="font-size: 14px;">Photos</span>
+                                        </div>
+                                        <div class="col-4 col-md-4 p-3 d-flex flex-column align-items-center justify-content-center apps-icons">
+                                            <img src="images/google.png" alt="" width="40" height="40">
+                                            <span style="font-size: 14px;">Search</span>
+                                        </div>
+                                        <div class="col-4 col-md-4 p-3 d-flex flex-column align-items-center justify-content-center apps-icons">
+                                            <img src="images/gmail.png" alt="" width="40" height="40">
+                                            <span style="font-size: 14px;">Gmail</span>
+                                        </div>
+                                        <div class="col-4 col-md-4 p-3 d-flex flex-column align-items-center justify-content-center apps-icons">
+                                            <img src="images/photos.png" alt="" width="40" height="40">
+                                            <span style="font-size: 14px;">Photos</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item border-0">
+                        <div class="btn-group">
+                            <img src="images/Account-User-PNG-HD.png" width="35" height="35" alt="" class="rounded-circle dropdown-toggle"
+                                 data-toggle="dropdown" aria-expanded="false">
+                            <div class="dropdown-menu dropdown-menu-right py-3 ">
+                                <div class="user-details d-flex flex-column align-items-center">
+                                    <img src="images/Account-User-PNG-HD.png" alt="" width="80" height="80" class="rounded-pill">
+                                    <div class="userName">
+                                        @employeeName
+                                    </div>
+                                    <div class="userEmail">
+                                        @loginId
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class=" d-flex justify-content-center">
+                                    <button class="py-2 px-3 bg-white singOut-btn rounded font-weight-bold" @onclick="Logout">
+                                        Sign Out
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="layout d-flex flex-grow-1">
+        <div class="sidebar d-flex flex-column position-relative" id="sidebar">
+            <div class="sidebar-content position-fixed h-100">
+                <div class="sidebar-top d-flex flex-column border-bottom">
+                    <ul class="list-group mt-4">
+                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end">
+                            <div class="sub-list-collapse-icon">
+                            </div>
+                            <span class="material-symbols-outlined mr-3">
+                                home
+                            </span>
+                            <a href="Home">
+                                Home
+                            </a>
+
+                        </li>
+                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end" data-toggle="collapse"
+                            href="#accounce-subListcollapse-2" role="button" aria-expanded="false"
+                            aria-controls="subListcollapse-2">
+                            <div class="sub-list-collapse-icon align-self-center">
+                                <i class="fa-solid fa-caret-right"></i>
+                            </div>
+
+                            <span class="material-symbols-outlined mr-3">
+                                person
+                            </span>
+                            <p class="m-0">Inventory</p>
+                        </li>
+                        <div class="collapse subListcollapse" id="accounce-subListcollapse-2">
+                            <ul class="list-group">
+                                <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
+                                    data-toggle="collapse" href="#subListcollapse-2-1" role="button"
+                                    aria-expanded="false" aria-controls="subListcollapse-2-1">
+                                    <div class="sub-list-collapse-icon align-self-center">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                    </div>
+                                    <p class="m-0">Master</p>
+
+                                </li>
+                                <div class="collapse subListcollapse" id="subListcollapse-2-1">
+                                    <ul class="list-group">
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="Supplier">Supplier</a>
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            B
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            C
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            D
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            E
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
+                                    data-toggle="collapse" href="#transection_subListcollapse" role="button"
+                                    aria-expanded="false" aria-controls="subListcollapse-2-1">
+                                    <div class="sub-list-collapse-icon align-self-center">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                    </div>
+                                    <p class="m-0">Transection</p>
+
+                                </li>
+                                <div class="collapse subListcollapse" id="transection_subListcollapse">
+                                    <ul class="list-group">
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Payment
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Receipt
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Journal
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            Contra
+                                        </li>
+                                    </ul>
+                                </div>
+                                <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center"
+                                    data-toggle="collapse" href="#report_subListcollapse" role="button"
+                                    aria-expanded="false" aria-controls="subListcollapse-2-1">
+                                    <div class="sub-list-collapse-icon align-self-center">
+                                        <i class="fa-solid fa-caret-right"></i>
+                                    </div>
+                                    <p class="m-0">Reports</p>
+
+                                </li>
+                                <div class="collapse subListcollapse" id="report_subListcollapse">
+                                    <ul class="list-group">
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg">Trial Balance</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg">Balance Sheet</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg">Profit & Loss</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a data-toggle="modal" data-backdrop="static" data-keyboard="false" href="" data-target="._bd-example-modal-lg_gl">General Ledger</a>
+
+                                        </li>
+                                        <li class="list-group-item border-0 px-3 py-2 d-flex align-items-center">
+                                            <a href="General_Journal">General Journal</a>
+                                        </li>
+                                    </ul>
+                                </div>                                
+                            </ul>
+                        </div>
+
+                        <!--Contact  end-->
+                        <!-- start save collapse links in this list -->
+                        <div class="collapse" id="collapseExample">                            
+                        </div>
+                        <!-- end save collapse links in this list -->
+                    </ul>                    
+                </div>               
+            </div>
+        </div>
+        <!-- //mini sidebar section -->
+        <div class="mini-sidebar d-flex flex-column position-relative">
+            <div class="mini-sidebar-wrapper position-fixed">
+                <ul class="list-group mt-4">
+                    <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end mini-sidebar-list">
+                        <span class="material-symbols-outlined">
+                            home
+                        </span>
+                    </li>
+                    <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end mini-sidebar-list"
+                        data-toggle="collapse" href="#subListcollapse-2" role="button" aria-expanded="false"
+                        aria-controls="subListcollapse-2">
+                        <span class="material-symbols-outlined">
+                            person
+                        </span>
+                    </li>
+                    <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end mini-sidebar-list">
+                        <span class="material-symbols-outlined">
+                            devices
+                        </span>
+                    </li>
+                    <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end mini-sidebar-list">
+                        <span class="material-symbols-outlined">
+                            apps
+                        </span>
+                    </li>
+                    <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end mini-sidebar-list">
+                        <span class="material-symbols-outlined">
+                            credit_card
+                        </span>
+                    </li>
+                    <li class="list-group-item border-0 px-3 py-2 d-flex align-items-end mini-sidebar-list">
+                        <span class="material-symbols-outlined">
+                            alternate_email
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- //mini sidebar section -->
+        <div class="dashMainContainer px-3 pt-3 pb-5" style="margin-top:20px;margin-left:20px">
+            <div class="container-fluid">
+                @Body
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+@code {
+    IJSObjectReference module;
+    [Inject]
+    public IJSRuntime JSRuntime { get; set; }
+    private IJSObjectReference _jsModule;
+    public static string employeeName;
+    public static string employeeDesignation;
+    public static string employeeDepartment;
+    public static string loginId;
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+
+    }
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            //await JsRuntime.InvokeVoidAsync("JsInteropcollaps");
+            //await ijsruntime.InvokeAsync<string>(
+            //    "QuillFunctions.createQuill", divEditorElement);
+
+
+        }
+
+    }
+
+
+    public async Task Logout()
+    {
+        UriHelper.NavigateTo("/", true);
+    }
+
+
+    void Requisition() { UriHelper.NavigateTo("PurchaseRequisition"); }
+    
+}

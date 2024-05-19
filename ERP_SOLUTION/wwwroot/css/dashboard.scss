@@ -1,0 +1,300 @@
+$baseColor: #296edd;
+
+$sidebarListHoverColor: rgb(231, 240, 255);
+$sidebarListFont: 0.8rem;
+
+$dashListHoverColor: #f2f2f2;
+$dashListFont: 12px;
+$color: rgb(108, 108, 108);
+
+$all14FontSize: 14px;
+
+// screen size for media query
+$breakpoint-small: 1025px;
+$breakpoint-xs: 768px;
+
+body{
+    color:rgb(108, 108, 108) !important;
+    font-family: Roboto, sans,serif;
+    // font-family: Oswald;
+}
+nav{
+    background-color: $baseColor !important;
+    height: 55px;
+    z-index: 100;
+    .nav-group-icons{
+        @media screen and (max-width: $breakpoint-xs) {
+            display: none !important;
+        }
+    }
+    .input-group-text{
+        background:rgb(44, 92, 205) !important;
+    }
+
+    
+    input::placeholder{
+        color:rgb(226, 226, 226)  !important;
+    }
+    .material-symbols-outlined{
+        cursor: pointer;
+    }
+    .user-details{
+        width: 300px;
+        .userEmail{
+            font-size: $all14FontSize;
+        }
+    }
+    .singOut-btn{
+        font-size: $all14FontSize;
+        border: 2px solid rgb(228, 228, 228);
+        color: $color;
+    }
+    .noti-header{
+        span{
+            font-size: 12px;
+        }
+    }
+    .noti-wrapper{
+        &:hover{
+            background-color: $dashListHoverColor;
+            cursor: pointer;
+        }
+    }
+    .apps-icons{
+        &:hover{
+            background-color: $dashListHoverColor;
+            cursor: pointer;
+        }
+    }
+    .dropdown-menu {
+        z-index: 100;
+    }
+    .form-inline{
+        input{
+            background:rgb(44, 92, 205) !important;
+        }
+        @media screen and (max-width: $breakpoint-xs) {
+            display: none !important;
+        }
+    }
+    .mini-search-input{
+        @media screen and (min-width: $breakpoint-xs) {
+            display: none !important;
+        }
+    }
+}
+.active-link{
+    color: $baseColor !important;
+}
+
+.collapse-btn{
+    color: $baseColor;
+    font-size: 12px;
+}
+.right-side-toggle{
+    width: 350px !important;
+}
+.right-side-arrow-toggle{
+    transform: rotateY(180deg) !important;
+}
+.sidebar-mobile-toggle{
+    transform: translateX(0) !important;
+}
+.rightSideContent-list-toggle{
+    display: flex !important;
+}
+.rightSideContent-toggle{
+    transform: translateX(-300px) !important;
+}
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+
+}
+li{
+    background-color: transparent !important;
+}
+img{
+    object-fit: fill;
+}
+.main{
+    height: 100vh;
+    .layout{
+        margin-top: 55px;
+        .mini-sidebar{
+            width: 59px;
+            display: none !important;
+            @media screen and (max-width: $breakpoint-small) {
+                display: flex !important;
+            }
+        }
+        .mini-sidebar-toggle{
+            display: flex !important;
+        }
+        .sideBar-toggle{
+            transform: translateX(-100%);
+            display: none !important;
+        }
+        .sidebar{
+            @media screen and (max-width: $breakpoint-small) {
+                display: none !important;
+            }
+            .sidebar-top{
+                height: 70%;
+            }
+            width: 15%;
+            ul{
+                .subListcollapse{
+                    margin-left: 50px;
+                    li{
+                        &:hover{
+                            background-color: transparent !important;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                li{
+                    color: $color;
+                    font-size: $dashListFont; 
+                    font-weight: 500;
+                    &:hover{
+                        background-color: $sidebarListHoverColor;
+                        border-radius: 0 25px 25px 0;
+                        color: $baseColor;
+                    }
+                   
+                    .sub-list-collapse-icon{
+                        width: 15px;
+                        display: flex;
+                    }
+                }
+            }
+            .sidebar-down{
+                font-size: 12px;
+                width: 70%;
+                padding: 25px;
+            }
+            
+        }
+        .dashMainContainer{
+            width: 97%;
+            .card{
+                border-radius: 10px;
+                .card-header{
+                    border-radius: 10px;
+                    .collapse-title{
+                        color: $baseColor;
+                        font-size: $dashListFont;
+                    }
+                    .expand-more-dash-icon{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 25px;
+                        margin-left: 5px;
+                        &:hover{
+                            background-color: $dashListHoverColor;
+                        }
+                        &:focus{
+                            background-color: $dashListHoverColor;
+                        }
+                        &:active{
+                            background-color: $dashListHoverColor;
+                        }
+                    }
+                }
+                .card-body{
+                    border-radius: 10px;
+                    overflow: hidden;
+                    li{
+                        color: $baseColor;
+                        font-size: $dashListFont;
+                        &:hover{
+                            background-color: $dashListHoverColor;
+                        }
+                    }
+                }
+            }
+        }
+        .rightSideContent{
+            width: 1%;
+            @media screen and (max-width: $breakpoint-xs) {
+                position: fixed !important;
+                left: 100%;
+                width: 300px;
+                height: 100%;
+            }
+            
+            .left-side-expend-btn{
+                position: relative;
+                right: 30px;
+                background-color: rgb(229, 229, 229);
+                width: 30px;
+                height: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .rightSideContent-list{
+                display: none;
+                font-size: $all14FontSize;
+            }
+        }
+    }
+    
+}
+
+#sidebar-mobile{
+    display: none;
+    width: 230px;
+    font-size: 14px;
+    height: 100vh;
+    position: absolute;
+    background-color: #f9f9f9;
+    z-index: 100;
+    overflow: auto;
+    transform: translateX(-250px);
+    transition: all 0.3s;
+    box-shadow: 0px 0px 5px 0px;
+    .sidebar-wrapper{
+        margin-top: 56px;
+        width: 100%;
+    }
+    ul{
+        .subListcollapse{
+            margin-left: 50px;
+            li{
+                &:hover{
+                    background-color: transparent !important;
+                    cursor: pointer;
+                }
+            }
+        }
+        li{
+            color: $color;
+            font-size: $dashListFont; 
+            font-weight: 500;
+            &:hover{
+                background-color: $sidebarListHoverColor;
+                border-radius: 0 25px 25px 0;
+                color: $baseColor;
+            }
+           
+            .sub-list-collapse-icon{
+                width: 15px;
+                display: flex;
+            }
+        }
+    }
+    
+
+
+    @media screen and (max-width: $breakpoint-small) {
+        display: flex !important;
+    }
+}
+
