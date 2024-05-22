@@ -90,7 +90,7 @@ using ERP_SOLUTION.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 626 "F:\aktar\ERP_SOLUTION_BLAZOR\ERP_SOLUTION\Shared\MainLayout.razor"
+#line 980 "F:\aktar\ERP_SOLUTION_BLAZOR\ERP_SOLUTION\Shared\MainLayout.razor"
        
     IJSObjectReference module;
     [Inject]
